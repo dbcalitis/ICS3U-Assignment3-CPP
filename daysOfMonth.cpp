@@ -20,19 +20,20 @@ int main() {
 
     try {
         userInput = std::stoi(userInputString);
-        switch(userInput) {
+        switch (userInput) {
             case 1:
                 std::cout << "January has 31 days." << std::endl;
                 break;
             case 2:
                 std::cout << "Is it in a leap year?: ";
                 std::cin >> leapYear;
-                
+
                 /* https://stackoverflow.com/questions/313970
                 /how-to-convert-an-instance-of-stdstring-to-lower-case */
-                std::transform(leapYear.begin(), leapYear.end(), leapYear.begin(),
+                std::transform(
+                    leapYear.begin(), leapYear.end(), leapYear.begin(),
                 [](unsigned char c){ return std::tolower(c); });
-                
+
                 if (leapYear == "yes") {
                     std::cout << "February has 29 days." << std::endl;
                 } else if (leapYear == "no") {
@@ -72,10 +73,9 @@ int main() {
                 std::cout << "December has 31 days." << std::endl;
                 break;
         }
-    
     } catch(...) {
             std::cout << "Invalid Input.";
     }
-    
+
     std::cout << "\nDone.";
 }
