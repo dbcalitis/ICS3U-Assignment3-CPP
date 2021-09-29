@@ -15,9 +15,11 @@ int main() {
     std::string userInputString;
     int userInput;
 
+    // input
     std::cout << "Enter the number of the month (ex: January = 1): ";
     std::cin >> userInputString;
 
+    // process & output
     try {
         userInput = std::stoi(userInputString);
         switch (userInput) {
@@ -25,6 +27,7 @@ int main() {
                 std::cout << "January has 31 days." << std::endl;
                 break;
             case 2:
+                // second input
                 std::cout << "Is it in a leap year?: ";
                 std::cin >> leapYear;
 
