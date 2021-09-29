@@ -10,7 +10,7 @@
 #include <algorithm>
 
 int main() {
-    // This function gives the number of days of th emonths based on user input
+    // This function gives the number of days of the months based on user input
     std::string leapYear;
     std::string userInputString;
     int userInput;
@@ -72,6 +72,8 @@ int main() {
             case 12:
                 std::cout << "December has 31 days." << std::endl;
                 break;
+            default;
+                std::cout << "Invalid Number." << std::endl;
         }
     } catch(...) {
             std::cout << "Invalid Input.";
